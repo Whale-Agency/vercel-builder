@@ -1,30 +1,29 @@
-# Frontity - Now builder
+# Frontity - Vercel builder
 
-Use this builder to deploy a [Frontity](https://frontity.org) project in the Zeit Now hosting.
+Use this builder to deploy a [Frontity](https://frontity.org) project in the Vercel. This package is a fork of [@frontity/now](https://www.npmjs.com/package/@frontity/now)
 
 ## Before deploying
 
-1. Create this `now.json` file in your project and change the site url:
+1. Create this `vercel.json` file in your project and change the site url:
 
 ```json
 {
-  "alias": "www.your-site.com",
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@frontity/now"
-    }
-  ]
+	"version": 2,
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@whale-agency/vercel"
+		}
+	]
 }
 ```
 
-2. Create an account on Now. You can [signup here](https://zeit.co/signup).
+2. Create an account on Vercel. You can [signup here](https://vercel.com/signup).
 
 3. Log in the terminal:
 
 ```bash
-> npx now login
+> npx vercel login
 ```
 
 ## Deploy a test site
@@ -32,19 +31,19 @@ Use this builder to deploy a [Frontity](https://frontity.org) project in the Zei
 Deploy Frontity using this command:
 
 ```bash
-> npx now
+> npx vercel
 ```
 
 That will give you a unique URL for that deploy. Check that everything is ok.
 
 ## Deploy a production site
 
-You need to [add a CNAME](https://zeit.co/docs/v2/custom-domains/#option-2:-using-external-nameservers) of `www.your-site.com` to `alias.zeit.co` in your domain DNS settings.
+You need to [add a CNAME](https://vercel.com/docs/concepts/projects/custom-domains#option-2:-using-external-nameservers) of `www.your-site.com` to `cname.vercel-dns.com` in your domain DNS settings.
 
 Then, deploy Frontity using this command:
 
 ```bash
-> npx now --target production
+> npx vercel --prod
 ```
 
-That will createa a deploy and assign it to your real site url.
+That will create a deploy and assign it to your real site url.
