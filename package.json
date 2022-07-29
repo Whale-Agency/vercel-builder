@@ -1,6 +1,6 @@
 {
 	"name": "@whale-agency/vercel",
-	"version": "1.3.0",
+	"version": "1.2.2",
 	"description": "A Frontity builder for Vercel. Forked from @fontity/now-builder",
 	"repository": {
 		"type": "git",
